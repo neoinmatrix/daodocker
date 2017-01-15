@@ -1,5 +1,3 @@
 #!/bin/bash
-
-source /etc/apache2/envvars
-tail -F /var/log/apache2/* &
-exec apache2 -D FOREGROUND
+/usr/sbin/sshd $
+/usr/local/apache2/bin/httpd -D FOREGROUND
