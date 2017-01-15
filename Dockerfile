@@ -6,7 +6,7 @@ WORKDIR /usr/local/src
 #下载并解压源码包
 RUN wget http://mirrors.hust.edu.cn/apache/httpd/httpd-2.4.25.tar.gz
 RUN tar -zxvf httpd-2.4.25.tar.gz
-WORKDIR:2.4.25
+WORKDIR httpd-2.4.25
 #编译安装apache
 RUN yum install -y gcc make apr-devel apr apr-util apr-util-devel pcre-devel
 RUN ./configure --prefix=/usr/local/apache2  --enable-mods-shared=most  --enable-so
